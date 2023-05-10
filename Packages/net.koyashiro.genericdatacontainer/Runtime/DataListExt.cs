@@ -91,6 +91,7 @@ namespace Koyashiro.GenericDataContainer
             var dataList = (DataList)(object)(list);
             var token = DataTokenUtil.NewDataToken(item);
             return dataList.IndexOf(token);
+            return dataList.IndexOf(token, index);
         }
 
         public static int IndexOf<T>(this DataList<T> list, T item, int index, int count)
@@ -129,18 +130,18 @@ namespace Koyashiro.GenericDataContainer
             return dataList.LastIndexOf(token);
         }
 
-        public static int LastIndexOf<T>(this DataList<T> list, T item, int index, int count)
-        {
-            var dataList = (DataList)(object)(list);
-            var token = DataTokenUtil.NewDataToken(item);
-            return dataList.LastIndexOf(token, index, count);
-        }
-
         public static int LastIndexOf<T>(this DataList<T> list, T item, int index)
         {
             var dataList = (DataList)(object)(list);
             var token = DataTokenUtil.NewDataToken(item);
             return dataList.LastIndexOf(token, index);
+        }
+
+        public static int LastIndexOf<T>(this DataList<T> list, T item, int index, int count)
+        {
+            var dataList = (DataList)(object)(list);
+            var token = DataTokenUtil.NewDataToken(item);
+            return dataList.LastIndexOf(token, index, count);
         }
 
         public static bool Remove<T>(this DataList<T> list, T item)
