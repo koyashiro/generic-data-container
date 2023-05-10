@@ -5,7 +5,7 @@ using Koyashiro.UdonTest;
 namespace Koyashiro.GenericDataContainer.Tests
 {
     [AddComponentMenu("")]
-    public class GetValueTest : UdonSharpBehaviour
+    public class DataListGetValueTest : UdonSharpBehaviour
     {
         public TestUserDefinedClass testUserDefinedClass;
 

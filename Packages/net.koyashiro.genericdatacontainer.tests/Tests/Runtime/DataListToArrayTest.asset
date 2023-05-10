@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
-  m_Name: RemoveTest
+  m_Name: DataListToArrayTest
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 2d65a30c2a897ea43943e2d30bf0dc46,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 7d3f4ad7b0a326c48b28a32fdd712440,
     type: 2}
   udonAssembly: 
   assemblyError: 
-  sourceCsScript: {fileID: 11500000, guid: 55031639b861dac4e8cc229569df4999, type: 3}
+  sourceCsScript: {fileID: 11500000, guid: f221fd0cde926cf449dca438d119d764, type: 3}
   scriptVersion: 2
   compiledVersion: 2
   behaviourSyncMode: 0
   hasInteractEvent: 0
-  scriptID: -1212075556831364520
+  scriptID: -4792159292266274320
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 

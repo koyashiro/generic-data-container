@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
-  m_Name: AddRangeTest
+  m_Name: DataListNewTest
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 66a480af750d1fc408149bc4901d8450,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 65163c235e8f8b94382f8350c235a956,
     type: 2}
   udonAssembly: 
   assemblyError: 
-  sourceCsScript: {fileID: 11500000, guid: 8ad2f8def524d0e4e8935cb6a497cc23, type: 3}
+  sourceCsScript: {fileID: 11500000, guid: af9f956a6c44c7a4796ffe21a383308c, type: 3}
   scriptVersion: 2
   compiledVersion: 2
   behaviourSyncMode: 0
   hasInteractEvent: 0
-  scriptID: -4870913490715879689
+  scriptID: 137470817354433012
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
