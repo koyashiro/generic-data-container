@@ -100,19 +100,19 @@ namespace Koyashiro.GenericDataContainer
             return dataList.IndexOf(token, index, count);
         }
 
+        public static void Insert<T>(this DataList<T> list, int index, T item)
+        {
+            var dataList = (DataList)(object)(list);
+            var token = DataTokenUtil.NewDataToken(item);
+            dataList.Insert(index, token);
+        }
+
         public static void InsertRange<T>(this DataList<T> list, int index, T[] collection)
         {
             for (var i = index; i < collection.Length; i++)
             {
                 list.Insert(i, collection[i]);
             }
-        }
-
-        public static void Insert<T>(this DataList<T> list, int index, T item)
-        {
-            var dataList = (DataList)(object)(list);
-            var token = DataTokenUtil.NewDataToken(item);
-            dataList.Insert(index, token);
         }
 
         public static void InsertRange<T>(this DataList<T> list, int index, DataList<T> collection)

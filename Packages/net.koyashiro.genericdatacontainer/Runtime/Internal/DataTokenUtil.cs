@@ -89,6 +89,7 @@ namespace Koyashiro.GenericDataContainer.Internal
                 return new DataToken(obj);
             }
         }
+
         public static DataToken[] NewDataTokens<T>(T[] array)
         {
             var length = array.Length;
