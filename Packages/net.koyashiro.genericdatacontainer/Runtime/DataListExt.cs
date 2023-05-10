@@ -213,7 +213,16 @@ namespace Koyashiro.GenericDataContainer
             var array = (T[])Array.CreateInstance(typeof(T), length);
             for (var i = 0; i < length; i++)
             {
-                array[i] = (T)(object)dataList[i];
+                var token = dataList[i];
+                switch (token.TokenType)
+                {
+                    case TokenType.Reference:
+                        array[i] = (T)token.Reference;
+                        break;
+                    default:
+                        array[i] = (T)(object)token;
+                        break;
+                }
             }
             return array;
         }
