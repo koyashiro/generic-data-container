@@ -90,7 +90,6 @@ namespace Koyashiro.GenericDataContainer
         {
             var dataList = (DataList)(object)(list);
             var token = DataTokenUtil.NewDataToken(item);
-            return dataList.IndexOf(token);
             return dataList.IndexOf(token, index);
         }
 
