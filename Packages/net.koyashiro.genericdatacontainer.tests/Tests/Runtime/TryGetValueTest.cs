@@ -7,6 +7,8 @@ namespace Koyashiro.GenericDataContainer.Tests
     [AddComponentMenu("")]
     public class TryGetValueTest : UdonSharpBehaviour
     {
+        public TestUserDefinedClass testUserDefinedClass;
+
         public void Start()
         {
             var list = DataList<int>.New(new int[] { 100, 200, 300, 400 });
@@ -26,6 +28,12 @@ namespace Koyashiro.GenericDataContainer.Tests
 
             Assert.False(list.TryGetValue(4, out output));
             Assert.Equal(default(int), output);
+
+            var list2 = DataList<TestUserDefinedClass>.New();
+            list2.Add(testUserDefinedClass);
+            TestUserDefinedClass output2;
+            Assert.True(list2.TryGetValue(0, out output2));
+            Assert.Equal("Hello, world!", output2.field, this);
         }
     }
 }
