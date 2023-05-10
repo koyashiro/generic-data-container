@@ -32,19 +32,22 @@ Please install this package with [Creator Companion](https://vcc.docs.vrchat.com
 ```cs
 using UnityEngine;
 using UdonSharp;
+using Koyashiro.GenericDataContainer;
 
-namespace Koyashiro.GenericDataContainer.Tests
+public class DataListExample : UdonSharpBehaviour
 {
-    public class DataListExample : UdonSharpBehaviour
+    public void Start()
     {
-        public void Start()
-        {
-            DataList<int> list = DataList<int>.New();
-            list.Add(100);
-            list.Add(200);
-            list.Add(300);
-            int[] array = list.ToArray();
-        }
+        DataList<int> list = DataList<int>.New();
+        list.Add(100);
+        list.Add(200);
+        list.Add(300);
+
+        Debug.Log($"list[{0}]: {list.GetValue(0)}"); // 100
+        Debug.Log($"list[{1}]: {list.GetValue(1)}"); // 200
+        Debug.Log($"list[{2}]: {list.GetValue(2)}"); // 300
+
+        int[] array = list.ToArray();
     }
 }
 ```
