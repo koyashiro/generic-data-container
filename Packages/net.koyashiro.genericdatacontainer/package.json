@@ -1,7 +1,7 @@
 {
   "name": "net.koyashiro.genericdatacontainer",
   "displayName": "GenericDataContainer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A generic and type-safe wrapper for DataContainer.",
   "homepage": "https://github.com/koyashiro/generic-data-container",
   "bugs": {
@@ -18,7 +18,7 @@
     "url": "https://github.com/koyashiro/generic-data-container"
   },
   "samples": [],
-  "url": "https://github.com/koyashiro/generic-data-container/releases/download/v0.1.1/net.koyashiro.genericdatacontainer-0.1.1.zip",
+  "url": "https://github.com/koyashiro/generic-data-container/releases/download/v0.1.2/net.koyashiro.genericdatacontainer-0.1.2.zip",
   "vpmDependencies": {
     "com.vrchat.base": "3.2.0",
     "com.vrchat.udonsharp": "1.1.8"
