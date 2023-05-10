@@ -233,14 +233,31 @@ namespace Koyashiro.GenericDataContainer
                 return false;
             }
 
-            value = (T)(object)token;
+            switch (token.TokenType)
+            {
+                case TokenType.Reference:
+                    value = (T)token.Reference;
+                    break;
+                default:
+                    value = (T)(object)token;
+                    break;
+            }
+
             return true;
         }
 
         public static T GetValue<T>(this DataList<T> list, int index)
         {
             var dataList = (DataList)(object)(list);
-            return (T)(object)dataList[index];
+
+            var token = dataList[index];
+            switch (token.TokenType)
+            {
+                case TokenType.Reference:
+                    return (T)token.Reference;
+                default:
+                    return (T)(object)token;
+            }
         }
     }
 }
