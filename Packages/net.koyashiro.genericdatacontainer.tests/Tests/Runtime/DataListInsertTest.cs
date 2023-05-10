@@ -6,7 +6,7 @@ using Koyashiro.UdonTest;
 namespace Koyashiro.GenericDataContainer.Tests
 {
     [AddComponentMenu("")]
-    public class InsertTest : UdonSharpBehaviour
+    public class DataListInsertTest : UdonSharpBehaviour
     {
         public void Start()
         {
