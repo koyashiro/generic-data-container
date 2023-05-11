@@ -226,6 +226,27 @@ namespace Koyashiro.GenericDataContainer
             return array;
         }
 
+        public static object[] ToObjectArray<T>(this DataList<T> list)
+        {
+            var dataList = (DataList)(object)(list);
+            var length = dataList.Count;
+            var array = new object[length];
+            for (var i = 0; i < length; i++)
+            {
+                var token = dataList[i];
+                switch (token.TokenType)
+                {
+                    case TokenType.Reference:
+                        array[i] = (T)token.Reference;
+                        break;
+                    default:
+                        array[i] = (T)(object)token;
+                        break;
+                }
+            }
+            return array;
+        }
+
         public static void TrimExcess<T>(this DataList<T> list)
         {
             var dataList = (DataList)(object)(list);
