@@ -39,15 +39,42 @@ public class DataListExample : UdonSharpBehaviour
     public void Start()
     {
         DataList<int> list = DataList<int>.New();
+
         list.Add(100);
         list.Add(200);
         list.Add(300);
 
-        Debug.Log($"list[{0}]: {list.GetValue(0)}"); // 100
-        Debug.Log($"list[{1}]: {list.GetValue(1)}"); // 200
-        Debug.Log($"list[{2}]: {list.GetValue(2)}"); // 300
+        Debug.Log(list.GetValue(0)); // 100
+        Debug.Log(list.GetValue(1)); // 200
+        Debug.Log(list.GetValue(2)); // 300
 
         int[] array = list.ToArray();
+    }
+}
+```
+
+## `DataDictionary<T>`
+
+### Example
+
+```cs
+using UnityEngine;
+using UdonSharp;
+using Koyashiro.GenericDataContainer;
+
+public class DataDictionaryExample : UdonSharpBehaviour
+{
+    public void Start()
+    {
+        DataDictionary<string, int> dic = DataDictionary<string, int>.New();
+
+        dic.SetValue("first", 100);
+        dic.SetValue("second", 200);
+        dic.SetValue("third", 300);
+
+        Debug.Log(dic.GetValue("first")); // 100
+        Debug.Log(dic.GetValue("second")); // 200
+        Debug.Log(dic.GetValue("third")); // 300
     }
 }
 ```
