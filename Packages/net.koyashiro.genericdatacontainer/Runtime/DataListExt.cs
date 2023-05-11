@@ -1,4 +1,3 @@
-using System;
 using VRC.SDK3.Data;
 using Koyashiro.GenericDataContainer.Internal;
 
@@ -210,7 +209,7 @@ namespace Koyashiro.GenericDataContainer
         {
             var dataList = (DataList)(object)(list);
             var length = dataList.Count;
-            var array = (T[])Array.CreateInstance(typeof(T), length);
+            var array = new T[length];
             for (var i = 0; i < length; i++)
             {
                 var token = dataList[i];
