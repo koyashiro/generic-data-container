@@ -1,11 +1,11 @@
 {
   "name": "net.koyashiro.genericdatacontainer.tests",
   "displayName": "GenericDataContainer.Tests",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "vpmDependencies": {
     "com.vrchat.base": "3.2.0",
     "com.vrchat.udonsharp": "1.1.8",
-    "net.koyashiro.genericdatacontainer": "0.2.0",
+    "net.koyashiro.genericdatacontainer": "0.2.1",
     "net.koyashiro.udontest": "0.5.2"
   }
 }
