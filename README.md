@@ -53,7 +53,7 @@ public class DataListExample : UdonSharpBehaviour
 }
 ```
 
-## `DataDictionary<T>`
+## `DataDictionary<TKey, TValue>`
 
 ### Example
 
