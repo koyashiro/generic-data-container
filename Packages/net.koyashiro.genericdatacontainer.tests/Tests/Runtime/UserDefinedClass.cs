@@ -2,7 +2,7 @@ using UdonSharp;
 
 namespace Koyashiro.GenericDataContainer.Tests
 {
-    public class TestUserDefinedClass : UdonSharpBehaviour
+    public class UserDefinedClass : UdonSharpBehaviour
     {
         public string field;
     }

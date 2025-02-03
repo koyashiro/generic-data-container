@@ -74,6 +74,22 @@ namespace Koyashiro.GenericDataContainer
                 case TokenType.Reference:
                     value = (TValue)valueToken.Reference;
                     break;
+                case TokenType.DataList:
+                    value = (TValue)(object)valueToken.DataList;
+                    break;
+                case TokenType.DataDictionary:
+                    value = (TValue)(object)valueToken.DataDictionary;
+                    break;
+                case TokenType.Int:
+                    if (((TValue)(object)valueToken).GetType() == typeof(DataToken))
+                    {
+                        value = (TValue)(object)valueToken.Int;
+                    }
+                    else
+                    {
+                        value = (TValue)(object)valueToken;
+                    }
+                    break;
                 default:
                     value = (TValue)(object)valueToken;
                     break;
@@ -111,6 +127,22 @@ namespace Koyashiro.GenericDataContainer
                 case TokenType.Reference:
                     value = (TValue)valueToken.Reference;
                     break;
+                case TokenType.DataList:
+                    value = (TValue)(object)valueToken.DataList;
+                    break;
+                case TokenType.DataDictionary:
+                    value = (TValue)(object)valueToken.DataDictionary;
+                    break;
+                case TokenType.Int:
+                    if (((TValue)(object)valueToken).GetType() == typeof(DataToken))
+                    {
+                        value = (TValue)(object)valueToken.Int;
+                    }
+                    else
+                    {
+                        value = (TValue)(object)valueToken;
+                    }
+                    break;
                 default:
                     value = (TValue)(object)valueToken;
                     break;
@@ -130,6 +162,19 @@ namespace Koyashiro.GenericDataContainer
             {
                 case TokenType.Reference:
                     return (TValue)valueToken.Reference;
+                case TokenType.DataList:
+                    return (TValue)(object)valueToken.DataList;
+                case TokenType.DataDictionary:
+                    return (TValue)(object)valueToken.DataDictionary;
+                case TokenType.Int:
+                    if (((TValue)(object)valueToken).GetType() == typeof(DataToken))
+                    {
+                        return (TValue)(object)valueToken.Int;
+                    }
+                    else
+                    {
+                        return (TValue)(object)valueToken;
+                    }
                 default:
                     return (TValue)(object)valueToken;
             }

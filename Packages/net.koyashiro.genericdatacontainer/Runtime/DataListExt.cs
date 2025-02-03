@@ -218,6 +218,22 @@ namespace Koyashiro.GenericDataContainer
                     case TokenType.Reference:
                         array[i] = (T)token.Reference;
                         break;
+                    case TokenType.DataList:
+                        array[i] = (T)(object)token.DataList;
+                        break;
+                    case TokenType.DataDictionary:
+                        array[i] = (T)(object)token.DataDictionary;
+                        break;
+                    case TokenType.Int:
+                        if (((T)(object)token).GetType() == typeof(DataToken))
+                        {
+                            array[i] = (T)(object)token.Int;
+                        }
+                        else
+                        {
+                            array[i] = (T)(object)token;
+                        }
+                        break;
                     default:
                         array[i] = (T)(object)token;
                         break;
@@ -238,6 +254,22 @@ namespace Koyashiro.GenericDataContainer
                 {
                     case TokenType.Reference:
                         array[i] = (T)token.Reference;
+                        break;
+                    case TokenType.DataList:
+                        array[i] = (T)(object)token.DataList;
+                        break;
+                    case TokenType.DataDictionary:
+                        array[i] = (T)(object)token.DataDictionary;
+                        break;
+                    case TokenType.Int:
+                        if (((T)(object)token).GetType() == typeof(DataToken))
+                        {
+                            array[i] = (T)(object)token.Int;
+                        }
+                        else
+                        {
+                            array[i] = (T)(object)token;
+                        }
                         break;
                     default:
                         array[i] = (T)(object)token;
@@ -267,6 +299,22 @@ namespace Koyashiro.GenericDataContainer
                 case TokenType.Reference:
                     value = (T)token.Reference;
                     break;
+                case TokenType.DataList:
+                    value = (T)(object)token.DataList;
+                    break;
+                case TokenType.DataDictionary:
+                    value = (T)(object)token.DataDictionary;
+                    break;
+                case TokenType.Int:
+                    if (((T)(object)token).GetType() == typeof(DataToken))
+                    {
+                        value = (T)(object)token.Int;
+                    }
+                    else
+                    {
+                        value = (T)(object)token;
+                    }
+                    break;
                 default:
                     value = (T)(object)token;
                     break;
@@ -284,6 +332,19 @@ namespace Koyashiro.GenericDataContainer
             {
                 case TokenType.Reference:
                     return (T)token.Reference;
+                case TokenType.DataList:
+                    return (T)(object)token.DataList;
+                case TokenType.DataDictionary:
+                    return (T)(object)token.DataDictionary;
+                case TokenType.Int:
+                    if (((T)(object)token).GetType() == typeof(DataToken))
+                    {
+                        return (T)(object)token.Int;
+                    }
+                    else
+                    {
+                        return (T)(object)token;
+                    }
                 default:
                     return (T)(object)token;
             }
